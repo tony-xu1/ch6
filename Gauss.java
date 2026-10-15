@@ -11,14 +11,14 @@ public class Gauss{
 		System.out.print("n value: ");
 		int n = in. nextInt();
 				in. nextLine();
-		System.out.println(gauss(-x * x, n));
+		System.out.println(gauss(-x * x, -x * x, n));
 	}
 	
-	public static double gauss (double x, int n){
+	public static double gauss (double u, double x, int n){
 		double sum = 1;
 		for (int i = 1; i <= n; i++){
-		sum += x;
-		x = -x / i;
+		sum += u;
+		u = u * x / (i + 1);
 		}
 		return sum;
 	}
