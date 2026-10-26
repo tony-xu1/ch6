@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Spell{
+public class Scrabble{
 	public static void main(String[] args){
 		System.out.print("What word would you like to spell?");
 		Scanner in = new Scanner(System.in);
