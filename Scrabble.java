@@ -8,10 +8,17 @@ public class Scrabble{
 		
 		System.out.print("What letters do you have?");
 		String letters = in.nextLine();
+		
+		System.out.println("Can you spell it? " + canSpell(word.toLowerCase(), letters));
 	}
 	
 	public static boolean canSpell(String str, String letters){
-		
+		for (char i = 'a'; i < 'z'; i++){
+			if (counter(str, i) > counter(letters, i)){
+				return false;
+			}
+		} 
+		return true;
 	}
 	
 	public static int counter (String str, char let){
